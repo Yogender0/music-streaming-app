@@ -7,8 +7,11 @@ export default function Home() {
   useEffect(() => {
     fetch("http://localhost:5000/api/tracks")
       .then(res => res.json())
-      .then(setTracks)
-      .catch(console.error);
+      .then(data => {
+        if (Array.isArray(data)) setTracks(data);
+        else setTracks([]);
+      })
+      .catch(() => setTracks([]));
   }, []);
 
   return (
