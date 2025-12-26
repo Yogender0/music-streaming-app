@@ -1,9 +1,14 @@
 import express from "express";
 import cors from "cors";
+import dotenv from "dotenv";
+
 import tracksRoutes from "./routes/tracks.js";
 import podcastsRoutes from "./routes/podcasts.js";
 import playlistsRoutes from "./routes/playlists.js";
 import adminRoutes from "./routes/admin.js";
+
+/* 🔥 LOAD ENV FIRST */
+dotenv.config();
 
 const app = express();
 
