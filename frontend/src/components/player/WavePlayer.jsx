@@ -1,6 +1,4 @@
-import { useEffect, useRef } from "react";
-import React from "react";
-
+import React, { useEffect, useRef } from "react";
 import WaveSurfer from "wavesurfer.js";
 
 export default function WavePlayer({ url }) {
